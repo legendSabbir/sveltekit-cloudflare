@@ -1,0 +1,13 @@
+name = "sveltekit-cloudflare"
+compatibility_date = "2025-01-09"
+pages_build_output_dir = ".svelte-kit/cloudflare"
+
+# need to run this command once to create local db
+# wrangler d1 migrations apply test (then press N)
+# cancel the migration then run pnpm db:migrate
+
+[[d1_databases]]
+binding = "DB"
+database_name = "test"
+database_id = "2356a8ce-7674-44df-9a9c-e6856d91e1ce"
+migrations_dir = "src/lib/server/db/migrations"

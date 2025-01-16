@@ -1,0 +1,33 @@
+{
+  "name": "sveltekit-cloudflare",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "pnpm run build && wrangler pages dev",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:migrate-prd": "NODE_ENV=production drizzle-kit migrate",
+    "db:studio-prd": "NODE_ENV=production drizzle-kit studio",
+    "deploy": "pnpm run build && wrangler pages deploy"
+  },
+  "devDependencies": {
+    "@libsql/client": "^0.9.0",
+    "@sveltejs/adapter-cloudflare": "^5.0.1",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "cfw-bindings-wrangler-bridge": "^0.11.0",
+    "drizzle-kit": "^0.22.0",
+    "svelte": "^5.0.0",
+    "tailwindcss": "^3.4.9",
+    "vite": "^5.4.11",
+    "wrangler": "^3.102.0"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.33.0"
+  }
+}
